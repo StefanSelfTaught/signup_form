@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root {
+  --primary-red: hsl(0, 100%, 74%);
+  --primary-green: hsl(154, 59%, 51%);
+  --accent-blue: hsl(248, 32%, 49%);
+  --neutral-dark-blue: hsl(249, 10%, 26%);
+  --neutral-greyish-blue: hsla(246, 25%, 77%, 0.4);
+}
+
+body {
+  background-image: url(../images/bg-intro-desktop.png), linear-gradient(var(--primary-red), var(--primary-red));
+  background-size: cover;
+  background-position: center;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.headings {
+  flex-basis: 40%;
+  margin-right: 40px;
+}
+
+.signup-form {
+  flex-basis: 40%;
+}
+
+.headings {
+  color: #ffffff;
+}
+
+.main-header {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 35px 15px;
+  border-radius: 10px;
+  box-shadow: 0 8px 2px 0 rgba(0,0,0,.25);
+}
+
+.offer {
+  box-shadow: 0 8px 2px 0 rgba(0,0,0,.25);
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: var(--accent-blue);
+  padding: 15px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+input {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  display: block;
+  outline: none;
+  width: 90%;
+  height: 40px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 1px solid var(--neutral-greyish-blue);
+  text-indent: 30px;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 14px;
+  padding: 5px;
+}
+
+
+input[]
+
+
