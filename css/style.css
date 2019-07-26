@@ -1,11 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
+/* ===== CONTENT TABLE ====== 
+
+[1] CSS Variables
+[2] Base 
+[3] Container + Header
+[4] Section
+[5] Form
+[6] Media Query
+*/
+
+/* ====== CSS Variables ===== */
 :root {
   --primary-red: hsl(0, 100%, 74%);
   --primary-green: hsl(154, 59%, 51%);
+  --primary-white: #ffffff;
   --accent-blue: hsl(248, 32%, 49%);
   --neutral-dark-blue: hsl(249, 10%, 26%);
   --neutral-greyish-blue: hsla(246, 25%, 77%, 0.5);
+}
+/* ====== END ===== */
+
+
+/* ====== Base ===== */
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -17,7 +36,9 @@ body {
   padding: 0;
   margin: 0;
 }
+/* ====== END ===== */
 
+/* ====== Container + Header ===== */
 .container {
   height: 100vh;
   display: flex;
@@ -26,61 +47,72 @@ body {
   flex-flow: row nowrap;
 }
 
-.headings {
+header {
   flex-basis: 40%;
-  margin-right: 40px;
-  color: #ffffff;
+  margin-right: 4rem;
+  color: var(--primary-white);
 }
 
-.signup-form {
+.main-heading {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  letter-spacing: 0.1rem;
+}
+
+.sub-heading {
+  line-height: 1.6;
+  font-size: 1.8rem;
+}
+/* ====== END ===== */
+
+/* ====== Section ===== */
+section {
   flex-basis: 35%;
 }
 
 .offer {
-  box-shadow: 0 8px 2px 0 rgba(0,0,0,.19);
+  box-shadow: 0 0.8rem 0.2rem 0 rgba(0,0,0,.19);
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
   background-color: var(--accent-blue);
-  padding: 17px;
-  color: #ffffff;
+  padding: 1.7rem;
+  color: var(--primary-white);
   font-weight: 400;
-  border-radius: 10px;
+  border-radius: 1rem;
   border: 2px solid rgba(95, 84, 164, 0.5);
+  font-size: 1.6rem;
 }
 
-.signup-form .offer span {
+section .offer span {
   font-weight: 600;
 }
+/* ====== END ===== */
 
-.main-heading {
-  font-size: 24px;
-  line-height: 1.2;
-}
-
+/* ====== Form ===== */
 form {
-  background-color: #ffffff;
-  padding: 35px 15px;
-  border-radius: 10px;
-  box-shadow: 0 8px 2px 0 rgba(0,0,0,.25);
+  background-color: var(--primary-white);
+  padding: 3.5rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.8rem 0.2rem 0 rgba(0,0,0,.25);
   border: 1px solid var(--neutral-greyish-blue);
 }
 
 input {
   margin: 0 auto;
-  margin-bottom: 17px;
+  margin-bottom: 1.7rem;
   display: block;
   outline: none;
   width: 90%;
-  height: 40px;
+  height: 4rem;
   border-radius: 5px;
   text-decoration: none;
   border: 1px solid var(--neutral-greyish-blue);
-  text-indent: 30px;
+  text-indent: 3rem;
   font-family: 'Poppins';
   font-weight: 700;
-  font-size: 14px;
-  padding: 5px;
+  font-size: 1.4rem;
+  padding: 0.5rem;
 }
 
 input:focus {
@@ -89,19 +121,18 @@ input:focus {
 
 input[type="submit"] {
   text-transform: uppercase;
-  font-size: 14.5px;
-  font-weight: 600;
+  font-size: 1.45rem;
+  font-weight: 500;
   background-color: var(--primary-green);
-  color: #ffffff;
-  letter-spacing: 1.5px;
-  height: 49px;
+  color: var(--primary-white);
+  letter-spacing: 0.15rem;
+  height: 5rem;
   text-align: center; 
   display: block;
   width: 93%;
-
-  box-shadow: 0 3px 2px 0 #2e9466;
+  box-shadow: 0 0.3rem 0.2rem 0 #2e9466;
   text-indent: 0px;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   transition: all .2s;
 }
 
@@ -115,7 +146,7 @@ input[type="submit"]:hover {
 }
 
 input[type="submit"]:active {
-  box-shadow: 0 2px 1.5px 0 #2e9466;
+  box-shadow: 0 0.2rem 0.15rem 0 #2e9466;
   background-color: #58e9a8;
 }
 
@@ -126,7 +157,7 @@ input[type="email"].placeholderred::-webkit-input-placeholder {
 
 form p {
   text-align: center;
-  font-size: 11px;
+  font-size: 1.2rem;
   color: hsla(246, 25%, 77%, .9);
   font-weight: 600;
 }
@@ -154,7 +185,7 @@ form .error-msg {
 @keyframes errorAnimate {
   0% {
     opacity: 0;
-    transform: translateX(100px) translateY(70px);
+    transform: translateX(10rem) translateY(7rem);
   }
 
   100% {
@@ -169,7 +200,9 @@ form .error-msg {
   background-position: 95% 50%;
   transition: all .5s;
 }
+/* ====== END ===== */
 
+/* ====== Media Query ===== */
 @media screen and (max-width: 850px) {
   
   body {
@@ -179,7 +212,7 @@ form .error-msg {
   }
 
   .container {
-    padding: 25px;
+    padding: 2.5rem;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -187,30 +220,25 @@ form .error-msg {
     flex-direction: column;
   }
 
-  .headings {
-    margin-top: 150px;
+  header {
+    margin-top: 40rem;
     text-align: center;
-  }
-
-  form {
-    margin-bottom: 30px;
+    margin-right: 0;
   }
 
   .main-heading {
-    font-size: 15px;
+    font-size: 1.5rem;
   }
 
   .sub-heading {
-    margin-bottom: 70px;
-    font-size: 15px;
+    margin-bottom: 7rem;
+    font-size: 1.5rem;
   }
 
-  .headings {
-    color: #ffffff;
-    margin-right: 0;
-  }
-  
+  form {
+    margin-bottom: 7rem;
+  } 
 }
-
+/* ====== END ===== */
 
 
